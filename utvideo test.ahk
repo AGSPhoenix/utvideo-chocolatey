@@ -13,7 +13,7 @@ Send {Right}
 Send {Down}
 Send {Down}
 
-Sleep 500
+Sleep 2500
 
 ControlGet, numberOfCodecs, List, Count, SysListView321 ;Get number of codecs
 
