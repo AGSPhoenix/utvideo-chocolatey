@@ -23,7 +23,9 @@ assert "AutoHotkey.exe" in ahkExecutable
 def getNumberOfCodecs():
     response = subprocess.run([ahkExecutable, 'utvideo test.ahk'], stdout=subprocess.PIPE)
     assert response.returncode == 0
-    return int(response.stdout.decode())
+    numberofCodecs = int(response.stdout.decode())
+    print("Detected {} codec entries".format(numberofCodecs))
+    return numberofCodecs
 
 codecsAtStart = getNumberOfCodecs()
 
