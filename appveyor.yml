@@ -4,6 +4,10 @@ platform:
   - x64
   - x86
 
+environment:
+  chocolatey_api_key:
+    secure: EGT0huIxyk5gu5UYbv2kHP9S4Sb5Vu+sAy+8n5PC1f+jv6Z8x/UoTlf+q7uKnlaT
+
 
 install:
 - cinst autohotkey.install
@@ -15,7 +19,7 @@ test_script:
   cmd: C:\Python36\python test.py
 
 deploy_script:
-  cmd: choco push
+  cmd: choco push --api-key %chocolatey_api_key%
 
 after_test:
   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
