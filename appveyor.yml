@@ -1,0 +1,22 @@
+image: Visual Studio 2017
+
+platform:
+  - x64
+  - x86
+
+environment:
+  matrix:
+    - target: x64
+    - target: Win32
+
+on_finish:
+  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
+before_build:
+- cmd: cinst autohotkey.install virtualdub -y
+
+build_script:
+  cmd: C:\Python36\python test.py
+
+test: off
+
