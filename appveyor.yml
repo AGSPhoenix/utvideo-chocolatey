@@ -7,6 +7,8 @@ platform:
 environment:
   chocolatey_api_key:
     secure: EGT0huIxyk5gu5UYbv2kHP9S4Sb5Vu+sAy+8n5PC1f+jv6Z8x/UoTlf+q7uKnlaT
+  appveyor_api_key:
+    secure: xV1Gv50KtoOKgnkbcIV2Hsb6O8xc5sA1kj1jbOVyPYM=
 
 
 install:
@@ -19,7 +21,7 @@ test_script:
   cmd: C:\Python36\python test.py
 
 deploy_script:
-  cmd: choco push --api-key %chocolatey_api_key%
+  cmd: C:\Python36\python deploy manager.py
 
 after_test:
   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
