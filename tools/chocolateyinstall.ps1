@@ -2,7 +2,7 @@
 
 $packageName= 'utvideo'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://umezawa.dyndns.info/archive/utvideo/utvideo-20.3.0-win.exe'
+$url        = 'http://umezawa.dyndns.info/archive/utvideo/utvideo-20.4.0-win.exe'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -14,7 +14,7 @@ $packageArgs = @{
   validExitCodes= @(0)
 
   softwareName  = 'Ut Video Codec Suite'
-  checksum      = 'B264F0414F3DF30CED6D4F3B03936F747DDB0EF8B5ED3BD0D39FCE10A15E1962'
+  checksum      = 'A053B14C6D949633968764C3696B0B0B5D878A58DE3C9CB77564C245D6E36B4F'
   checksumType  = 'sha256'
 }
 
