@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>20.5.0</version>
+    <version>20.5.1</version>
     <packageSourceUrl>https://github.com/AGSPhoenix/utvideo-chocolatey</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>lx45803</owners>
@@ -43,15 +43,15 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- If there is a license Url available, it is is required for the community feed -->
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.en.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>http://umezawa.dyndns.info/archive/utvideo/utvideo-20.5.0-src.zip</projectSourceUrl>
-    <docsUrl>http://umezawa.dyndns.info/archive/utvideo/utvideo-20.5.0-readme.en.html</docsUrl>
+    <projectSourceUrl>http://umezawa.dyndns.info/archive/utvideo/utvideo-20.5.1-src.zip</projectSourceUrl>
+    <docsUrl>http://umezawa.dyndns.info/archive/utvideo/utvideo-20.5.1-readme.en.html</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
     <tags>utvideo admin video codec</tags>
     <summary>Ut Video Codec, a lossless video compression codec</summary>
     <description>Ut Video Codec Suite is a set of lossless video codecs for Windows, which are implemented as a VCM codec (also called "VfW codec"). Supports YUV and RGB.</description>
-    <releaseNotes>Performance Improvements
-* UMxx: Speed up encoding to / decoding from native packed formats.
+    <releaseNotes>Bug fixes
+* UMRG, UMRA: Intraframe encoding result is wrong when the remainder of width divided by 64 is 32 and pre-AVX2 environment.
 </releaseNotes>
     <!-- =============================== -->      
 
