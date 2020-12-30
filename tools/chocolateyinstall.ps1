@@ -2,7 +2,7 @@
 
 $packageName= 'utvideo'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/umezawatakeshi/utvideo/releases/download/utvideo-21.3.0/utvideo-21.3.0-win.exe'
+$url        = 'https://github.com/umezawatakeshi/utvideo/releases/download/utvideo-21.3.1/utvideo-21.3.1-win.exe'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -14,7 +14,7 @@ $packageArgs = @{
   validExitCodes= @(0)
 
   softwareName  = 'Ut Video Codec Suite'
-  checksum      = '3F91368CBCFEDE3204A6251ED3CC889EF0FAAFF5DE1EA11FAEDE2E8A3229B029'
+  checksum      = '6328C204811FBE36DF68CB04752C328951F76B2459C6258034D43FC2EEC9F4C8'
   checksumType  = 'sha256'
 }
 
