@@ -22,11 +22,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - name: Start SSH session
-        uses: luchihoratiu/debug-via-ssh@main
-        with:
-          NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
-          SSH_PASS: ${{ secrets.SSH_PASS }}
+      #- name: Start SSH session
+      #  uses: luchihoratiu/debug-via-ssh@main
+      #  with:
+      #    NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+      #    SSH_PASS: ${{ secrets.SSH_PASS }}
       
       - name: update package files with data for latest release
         run: python3 "github actions handler.py"
